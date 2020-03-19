@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: covid-19 run reporting",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "env": {
+                "COUNTRY_STRING": "Germany",
+                "COUNTRY_COLUMN": "6",
+                "DATE_COLUMN": "0",
+                "NEW_CONFIRMED_COLUMN": "4",
+                "NEW_DEATHS_COLUMN": "5",
+                "new_recovered_column": "-1",
+                "INFLUXDB_HOST": "",
+                "INFLUXDB_PORT": "",
+                "INFLUXDB_DBNAME": "covid_19",
+                "INFLUXDB_USER": "",
+                "INFLUXDB_USER_PASSWORD": ""
+            }
+        }
+    ]
+}

@@ -7,7 +7,7 @@ from influxdb import InfluxDBClient
 
 def get_download_path(date):
     date_string = date.strftime("%Y-%m-%d")
-    download_path = f'https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-{date_string}.xls'
+    download_path = f'https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-{date_string}.xlsx'
     return download_path
 
 
@@ -88,7 +88,7 @@ def post_data_to_influx(data_tuples):
     client.write_points(data_points, database=influx_db)
 
 
-filepath = f'tmp/today.xls'
+filepath = f'tmp/today.xlsx'
 
 influx_host = os.environ['INFLUXDB_HOST']
 influx_port = int(os.environ['INFLUXDB_PORT'])
