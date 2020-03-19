@@ -5,23 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: covid-19 run reporting",
+            "name": "Python: Aktuelle Datei",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "env": {
                 "COUNTRY_STRING": "Germany",
-                "COUNTRY_COLUMN": "6",
-                "DATE_COLUMN": "0",
-                "NEW_CONFIRMED_COLUMN": "4",
-                "NEW_DEATHS_COLUMN": "5",
-                "new_recovered_column": "-1",
+                "COUNTRY_COLUMN": "1",
+                "FIRST_DATE_COLUMN": "4",
                 "INFLUXDB_HOST": "",
                 "INFLUXDB_PORT": "",
                 "INFLUXDB_DBNAME": "covid_19",
-                "INFLUXDB_USER": "",
-                "INFLUXDB_USER_PASSWORD": ""
+                "INFLUXDB_USER": "admin",
+                "INFLUXDB_USER_PASSWORD": "",
             }
         }
     ]
