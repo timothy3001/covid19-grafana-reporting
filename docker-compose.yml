@@ -1,0 +1,13 @@
+version: '2.0'
+services:
+  updater:
+    build: .
+    environment: 
+        - COUNTRY_STRING=Germany
+        - COUNTRY_COLUMN=1
+        - FIRST_DATE_COLUMN=4
+        - INFLUXDB_HOST=
+        - INFLUXDB_PORT=8086
+        - INFLUXDB_DBNAME=covid_19
+        - INFLUXDB_USER=admin
+        - INFLUXDB_USER_PASSWORD=
