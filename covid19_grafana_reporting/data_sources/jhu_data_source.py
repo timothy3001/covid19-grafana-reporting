@@ -4,9 +4,9 @@ import requests
 from covid19_grafana_reporting.data_sources.data_source_interface import DataSourceInterface
 from datetime import datetime
 
-DOWNLOAD_CONFIRMED = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
-DOWNLOAD_DEATHS = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
-DOWNLOAD_RECOVERED = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv"
+DOWNLOAD_CONFIRMED = os.environ['DOWNLOAD_LINK_CONFIRMED']
+DOWNLOAD_DEATHS = os.environ['DOWNLOAD_LINK_DEATHS']
+DOWNLOAD_RECOVERED = os.environ['DOWNLOAD_LINK_RECOVERED']
 FILEPATH_CONFIRMED = "./tmp/today_confirmed.csv"
 FILEPATH_DEATHS = "./tmp/today_deaths.csv"
 FILEPATH_RECOVERED = "./tmp/today_recovered.csv"

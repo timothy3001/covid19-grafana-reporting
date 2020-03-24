@@ -3,6 +3,9 @@ services:
   updater:
     build: .
     environment: 
+        - DOWNLOAD_LINK_CONFIRMED=https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv
+        - DOWNLOAD_LINK_DEATHS=https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv
+        - DOWNLOAD_LINK_RECOVERED=https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv
         - COUNTRY_STRING=Germany
         - COUNTRY_COLUMN=1
         - FIRST_DATE_COLUMN=4
