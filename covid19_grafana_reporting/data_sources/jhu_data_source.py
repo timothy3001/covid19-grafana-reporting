@@ -56,15 +56,15 @@ class JhuDataSource(DataSourceInterface):
             total_recovered = 0
 
             if d in confirmed_data:
-                total_confirmed = confirmed_data[d]
+                total_confirmed = int(confirmed_data[d])
                 new_confirmed = int(confirmed_data[d]) - confirmed_before
                 confirmed_before = int(confirmed_data[d])
             if d in deaths_data:
-                total_deaths = deaths_data[d]
+                total_deaths = int(deaths_data[d])
                 new_deaths = int(deaths_data[d]) - deaths_before
                 deaths_before = int(deaths_data[d])
             if d in recovered_data:
-                total_recovered = recovered_data[d]
+                total_recovered = int(recovered_data[d])
                 new_recovered = int(recovered_data[d]) - recovered_before
                 recovered_before = int(recovered_data[d])
 
