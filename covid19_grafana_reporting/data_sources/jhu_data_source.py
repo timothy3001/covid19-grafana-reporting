@@ -51,14 +51,20 @@ class JhuDataSource(DataSourceInterface):
             new_confirmed = 0
             new_deaths = 0
             new_recovered = 0
+            total_confirmed = 0
+            total_deaths = 0
+            total_recovered = 0
 
             if d in confirmed_data:
+                total_confirmed = confirmed_data[d]
                 new_confirmed = int(confirmed_data[d]) - confirmed_before
                 confirmed_before = int(confirmed_data[d])
             if d in deaths_data:
+                total_deaths = deaths_data[d]
                 new_deaths = int(deaths_data[d]) - deaths_before
                 deaths_before = int(deaths_data[d])
             if d in recovered_data:
+                total_recovered = recovered_data[d]
                 new_recovered = int(recovered_data[d]) - recovered_before
                 recovered_before = int(recovered_data[d])
 
@@ -66,7 +72,10 @@ class JhuDataSource(DataSourceInterface):
                 'date': date,
                 'new_confirmed': new_confirmed,
                 'new_deaths': new_deaths,
-                'new_recovered': new_recovered
+                'new_recovered': new_recovered,
+                'total_confirmed': total_confirmed,
+                'total_deaths': total_deaths,
+                'total_recovered': total_recovered
             })
 
         return result_data_tuples
