@@ -29,7 +29,10 @@ def post_data_to_influx(data_tuples):
                 'fields': {
                     'new_confirmed': d['new_confirmed'],
                     'new_deaths': d['new_deaths'],
-                    'new_recovered': d['new_recovered']
+                    'new_recovered': d['new_recovered'],
+                    'total_confirmed': d['total_confirmed'],
+                    'total_deaths': d['total_deaths'],
+                    'total_recovered': d['total_recovered']
                 }
             })
 
